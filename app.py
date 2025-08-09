@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# streamlit run app.py para rodar o app e ctrl + c para parar\
-# quando for ver o ambiente virtual confira se tá no terminal certo
+#na hora de refazer só precisa de 4 coisas online, o csv, app.py, requirements.txt e o readme.md
+# streamlit run app.py para rodar o app e ctrl + c para parar
+# quando for ver o ambiente virtual confira se tá no terminal certo 
+# tem o codigo certo para criar o ambiente virtual
 
 # --- Configuração da Página ---
 # Define o título da página, o ícone e o layout para ocupar a largura inteira.
@@ -95,7 +97,7 @@ with col_graf2:
             x='usd',
             nbins=30,
             title="Distribuição de salários anuais",
-            labels={'usd': 'Faixa salarial (USD)', 'count': ''}
+            labels={'usd': 'Faixa salarial (USD)', 'count': ''} #, kde=True funciona não
         )
         grafico_hist.update_layout(title_x=0.1)
         st.plotly_chart(grafico_hist, use_container_width=True)
